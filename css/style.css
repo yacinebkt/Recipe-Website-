@@ -1,0 +1,871 @@
+/* Generaliste
+-----------------------------------------------------------------*/
+
+html {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    line-height: 1.6em;
+    box-sizing: border-box;
+}
+
+body {
+    color: #cbcbcb;
+    background-color: white;
+    min-height: 1000px;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    /*color: #dc3545;*/
+    outline: none;
+    text-decoration: none !important;
+}
+
+p {
+    font-weight: normal;
+    color: #999;
+}
+
+
+/**/
+
+.cover {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../img/bg4.jpg);
+    background-size: cover;
+}
+
+.couche:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #000;
+    opacity: 0.7;
+    z-index: 5;
+}
+
+.cover .content {
+    margin-top: 4%;
+    max-width: 900px;
+    text-align: center;
+    z-index: 10;
+}
+
+.cover .content h2 {
+    font-family: "Sansita Swashed", cursive;
+    font-size: 4em;
+    color: white;
+}
+
+.cover .content p {
+    font-size: 1em;
+    color: white;
+}
+
+.cover .content .btn {
+    font-size: 1em;
+    color: white;
+    background: #ff0157;
+    display: inline-block;
+    padding: 10px 30px;
+    margin-top: 35px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: 0.6s;
+}
+
+.cover .content .btn:hover {
+    color: white;
+    font-weight: bold;
+    letter-spacing: 6px;
+}
+
+
+/* Header*/
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 90px;
+    z-index: 99;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+}
+
+header .logo {
+    color: white;
+    font-weight: bold;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+header .logo span {
+    color: #ff0157;
+}
+
+header .navigation {
+    position: relative;
+    display: flex;
+}
+
+header .navigation li {
+    margin-left: 30px;
+}
+
+header .navigation li a {
+    color: white;
+    font-weight: normal;
+    transition: 0.5s;
+}
+
+header.fixednav {
+    background-color: white;
+    padding: 08px 120px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+header.fixednav .logo {
+    color: black;
+}
+
+header.fixednav .navigation li a {
+    color: black;
+    font-weight: normal;
+}
+
+header .navigation li a:hover {
+    color: #ff0157;
+    font-weight: bolder;
+    letter-spacing: 2px;
+}
+
+
+/* Header*/
+
+
+/**/
+
+
+/* Text blog overlapping image Section 
+------------------------------------------------------------------------------*/
+
+#about img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 10%;
+    line-height: normal;
+    vertical-align: middle;
+}
+
+#about #second-column {
+    z-index: 10;
+    background-color: white;
+    box-shadow: 0 0 10px 0 gray;
+}
+
+#about #second-column .page-section-heading {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+#about #second-column span {
+    font-family: "Sansita Swashed", cursive;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff0157;
+}
+
+#about #second-column p {
+    font-family: 'Indie Flower', cursive;
+    font-size: 1.5rem;
+    letter-spacing: 1.8;
+    font-weight: 600;
+    color: teal;
+}
+
+
+/*menu*/
+
+#menu .titel-menu {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#menu .titel-menu h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #444;
+}
+
+#menu .titel-menu p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #666;
+}
+
+#menu .titel-menu span {
+    font-family: "Sansita Swashed", cursive;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ff0157;
+}
+
+
+/*Lunch Recipes
+Dinner Recipes
+Dessert Recipes*/
+
+.card-img-top {
+    width: 100%;
+    height: 20vw;
+    object-fit: cover;
+}
+
+#menu {
+    background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
+}
+
+#menu .list-recpice-titel {
+    margin-top: 4rem;
+}
+
+#menu .list-recpice-titel h2 {}
+
+
+/**/
+
+#menu .btncarousel {
+    background: #ff0157;
+    color: black;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#menu .carousel-inner .carousel-item .card {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 1%;
+    transition: 0.5s;
+}
+
+#menu .carousel-inner .carousel-item .card:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 1%;
+    transform: scale(1.02);
+}
+
+#menu .carousel-inner .carousel-item .card .menu-titel a {
+    color: #444;
+    font-weight: 600;
+}
+
+#menu .carousel-inner .carousel-item .card .card-body .btn {
+    font-size: 1em;
+    color: white;
+    background: #ff0157;
+    display: inline-block;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: 0.6s;
+}
+
+#menu .carousel-inner .carousel-item .card .card-body .btn:hover {
+    color: white;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+
+/*--------------------------------------*/
+
+
+/* team */
+
+.start {
+    position: relative;
+    animation-name: anim04;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+#expert .titel-menu {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#expert .titel-menu h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #444;
+}
+
+#expert .titel-menu span {
+    font-family: "Sansita Swashed", cursive;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff0157;
+}
+
+#expert .expert-items .expert-item .expert-img-box {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+#expert .expert-items .expert-item .expert-img-box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 2%;
+    transition: 0.5s;
+    border-radius: 50%;
+}
+
+.expert-content {
+    margin-top: 0rem;
+    text-align: center;
+}
+
+.expert-content .expert-titel {
+    width: 100;
+    padding: 5px 30px;
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    transform: rotatez(08deg);
+    background: white;
+    z-index: 1000;
+    transition: 0.6s;
+}
+
+#expert .expert-items .expert-item :hover .expert-img-box img {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 1%;
+    transform: scale(1.02);
+}
+
+#expert .expert-items .expert-item :hover .expert-content .expert-titel {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    transform: rotatez(0.01deg);
+}
+
+#expert .expert-items .expert-item .expert-border-item {
+    /*  border: 2px solid gray;*/
+    border-radius: 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+#expert .expert-items .expert-item .expert-border-item .expert-titel a {
+    color: #444;
+    font-weight: 600;
+}
+
+
+/*  social icons*/
+
+.expert-social {
+    margin-top: 1rem;
+    padding: 0;
+    height: 5rem;
+    position: relative;
+}
+
+.expert-social a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 28px;
+    text-align: center;
+    background-color: white;
+    color: #32353C;
+}
+
+.expert-social li {
+    display: inline-block;
+    padding: 0;
+    margin: 0 5px 0 0;
+    /*line-height: normal;*/
+    transform: translateY(50px);
+    opacity: 0;
+    transition: 0.6s;
+}
+
+#expert .expert-items .expert-item :hover .expert-social li {
+    transform: translateY(-5px);
+    opacity: 1;
+}
+
+.expert-social a:hover {
+    font-size: 33px;
+}
+
+
+/* background color for ech icon */
+
+.rounded-circle {
+    transition: 0.8s;
+}
+
+.faicon-facebook:hover {
+    color: #3B5998 !important;
+    transform: rotatez(720deg);
+}
+
+.faicon-twitter:hover {
+    color: #1DA1F2 !important;
+    transform: rotatez(-720deg);
+}
+
+.faicon-instagram:hover {
+    color: #C13584 !important;
+    transform: rotatez(720deg);
+}
+
+.faicon-linkedin:hover {
+    color: #2867B2 !important;
+    transform: rotatez(-720deg);
+}
+
+
+/**/
+
+.ex16-04 {
+    position: relative;
+    animation-name: anim04;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    /*backwords*/
+    /*forwards+ backwords = both*/
+}
+
+@keyframes anim04 {
+    0% {
+        left: -500px;
+    }
+    20% {
+        left: -400px;
+    }
+    40% {
+        left: -300px;
+    }
+    60% {
+        left: -200px;
+    }
+    80% {
+        left: -100px;
+    }
+    100% {
+        left: 0px;
+    }
+}
+
+
+/***/
+
+
+/**/
+
+
+/* contact*/
+
+#contact .titel-contact {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#contact .titel-contact h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #444;
+}
+
+#contact .titel-contact span {
+    font-family: "Sansita Swashed", cursive;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff0157;
+}
+
+
+/**/
+
+
+/**/
+
+
+/*
+-------------------------------------------------------*/
+
+
+/*
+---------------------------------------------------- Start Footer*/
+
+#footerbody {
+    background: black;
+    width: 100%;
+}
+
+#footerbody .listlinks li {
+    display: block;
+    margin: 15px 0 0 0;
+    padding: 0 10px px 0;
+    border-bottom: 1px solid;
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+#footerbody ul {
+    padding: 0;
+}
+
+
+/**/
+
+#footerbody .social-icons {
+    padding: 0;
+    margin: 0;
+}
+
+#footerbody .social-icons a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 25px;
+    text-align: center;
+    background-color: white;
+    color: #32353C;
+}
+
+#footerbody .social-icons li {
+    display: inline-block;
+    padding: 0;
+    margin: 0 5px 0 0;
+    line-height: normal;
+}
+
+#footerbody .social-icons a:hover {
+    font-size: 30px;
+}
+
+
+/**/
+
+.footer-desc4 .input-sent {
+    position: relative;
+}
+
+.footer-desc4 input {
+    background-color: #000;
+    border: none;
+    outline: none;
+    color: #888;
+    border-bottom: 1px solid #888;
+    width: 90%;
+    padding: 5px 10px;
+    font-size: 13px;
+}
+
+.footer-desc4 .sent-icon {
+    color: #888;
+    font-size: 20px;
+    position: absolute;
+    transition: color 0.3s;
+}
+
+
+/**/
+
+
+/* back to top button 
+---------------------------------------------------*/
+
+#backtotop {
+    z-index: 10000000000000;
+    display: inline-block;
+    position: fixed;
+    bottom: 20px;
+    right: 08px;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 100%;
+    text-decoration: none;
+    color: white;
+    background-color: #ff0157;
+    visibility: hidden;
+    opacity: 0;
+}
+
+#backtotop i {
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: inherit;
+}
+
+#backtotop.visible {
+    visibility: visible;
+    opacity: 0.7;
+}
+
+#backtotop:hover {
+    opacity: 1000;
+}
+
+
+/* Side Socia icons Bar
+
+
+/*
+---------------------------------------------------------------------------------------------------------*/
+
+
+/* media*/
+
+
+/* Small devices (landscape phones, 576px and up)*/
+
+@media (max-width: 576px) {
+    section {
+        padding: 50px;
+    }
+    .card-img-top {
+        width: 100%;
+        height: 40vw;
+        object-fit: cover;
+    }
+    /* Header 
+    ----------------------------------------*/
+    header {
+        padding: 40px 25px;
+    }
+    header.fixednav {
+        padding: 08px 35px;
+    }
+    header .navigation {
+        display: none;
+        padding: 0;
+        margin: 0;
+    }
+    header .navigation.active {
+        position: fixed;
+        width: 40%;
+        height: calc(100% -80px);
+        top: 80px;
+        right: 10%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        background: white !important;
+        border-radius: 10%;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+    }
+    header .navigation li {
+        text-align: left;
+        /*padding-bottom: 5%;*/
+        margin-left: auto;
+        margin-right: auto;
+        padding: 5%;
+    }
+    header .navigation li a {
+        color: black !important;
+        font-size: 1.7rem;
+        padding: 0;
+        margin: 0;
+    }
+    .toggel {
+        position: relative;
+        width: 50px;
+        height: 45px;
+        background: url(../img/togleopenw.png);
+        background-size: 40px;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+    }
+    .toggel.active {
+        background: url(../img/togleclosew.png);
+        background-size: 35px;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+    }
+    header.fixednav .toggel {
+        filter: invert(1);
+    }
+    /* Text blog overlapping image Section 
+---------------------------------------------------------------------------*/
+    #about #second-column {
+        margin-left: 0px;
+        margin-top: -8%;
+    }
+}
+
+
+/**/
+
+@media (min-width: 576px) {
+    section {
+        padding: 50px;
+    }
+    /* Header 
+    ----------------------------------------*/
+    .card-img-top {
+        width: 100%;
+        height: 40vw;
+        object-fit: cover;
+    }
+    header {
+        padding: 40px 20px;
+    }
+    header.fixednav {
+        padding: 08px 25px;
+    }
+    header .navigation {
+        display: none;
+    }
+    /* Text blog overlapping image Section 
+---------------------------------------------------------------------------*/
+    #about #second-column {
+        margin-left: 0px;
+        margin-top: -10%;
+    }
+    /*blog-item-right
+  ----------------------------------------------------*/
+}
+
+
+/* Medium devices (tablets, 768px and up)*/
+
+@media (min-width: 768px) {
+    /**/
+    section {
+        padding: 50px;
+    }
+    .card-img-top {
+        width: 100%;
+        height: 20vw;
+        object-fit: cover;
+    }
+    /* Header 
+    ----------------------------------------*/
+    header {
+        padding: 40px 100px;
+    }
+    header.fixednav {
+        padding: 10px 60px;
+    }
+    header .navigation {
+        display: flex;
+    }
+    /* Text blog overlapping image Section 
+---------------------------------------------------------------------------*/
+    #about #second-column {
+        margin-left: 0px;
+        margin-top: 0%;
+    }
+    /* Text blog overlapping image Section 
+------------------------------------------------------------------------------*/
+    #about .p-5 {
+        padding: 3rem 1rem !important;
+    }
+}
+
+
+/* Large devices (desktops, 992px and up)*/
+
+@media (min-width: 992px) {
+    /*section*/
+    section {
+        padding: 50px 100px;
+    }
+    .card-img-top {
+        width: 100%;
+        height: 20vw;
+        object-fit: cover;
+    }
+    /* Header 
+    ----------------------------------------*/
+    header .navigation {
+        display: flex;
+    }
+    header {
+        padding: 40px 100px;
+    }
+    header.fixednav {
+        padding: 10px 120px;
+    }
+    /* Text blog overlapping image Section 
+------------------------------------------------------------------------------*/
+    #about.p-5 {
+        padding: 3rem 1rem !important;
+    }
+    #about #second-column {
+        margin-right: -07%;
+    }
+}
+
+
+/*Extra large devices (large desktops, 1200px and up)*/
+
+@media (min-width: 1200px) {}
+
+
+/*
+--------------------------------------------------*/
+
+@media screen and (max-width: 640px) {}
+
+@media (max-width: 576px) {}
